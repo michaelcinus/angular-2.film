@@ -10,6 +10,7 @@ import {Genere} from "src/app/model/genere"
 export class FilmComponent implements OnInit {
 
   movies:Array<Movie> = [];
+  selectedMovie!: Movie;
 
   constructor() { }
 
@@ -24,6 +25,17 @@ export class FilmComponent implements OnInit {
 
   getGenreValue(index: number): string {
     return Genere[index];
+  }
+
+  selectionClick(m: Movie): void {
+    //alert( JSON.stringify(m.title))
+    this.selectedMovie = m;
+  }
+
+  movieFormEvent(event: Movie) {
+    this.movies.push({
+      genere: Number(event.genere),  image: event.image, title: event.title, description: event.description, year: Number(event.year), duration: Number(event.duration)}
+    );
   }
 
 }

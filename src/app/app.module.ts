@@ -9,6 +9,8 @@ import { HomeComponent } from './page/home/home.component';
 import { FilmComponent } from './page/film/film.component';
 import { SerieComponent } from './page/serie/serie.component';
 import { SeasonComponent } from './page/season/season.component';
+import { MovieFormComponent } from './page/film/movie-form/movie-form.component';
+import { MovieModalComponent } from './page/film/movie-modal/movie-modal.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { SeasonComponent } from './page/season/season.component';
     HomeComponent,
     FilmComponent,
     SerieComponent,
-    SeasonComponent
+    SeasonComponent,
+    MovieFormComponent,
+    MovieModalComponent,
   ],
   imports: [
     BrowserModule,

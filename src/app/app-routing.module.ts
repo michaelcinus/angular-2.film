@@ -8,8 +8,7 @@ import { SerieComponent } from './page/serie/serie.component';
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'films', component: FilmComponent},
-  {path: 'serie', component: SerieComponent},
-  {path: 'season', component: SeasonComponent}
+  {path: 'serie', component: SerieComponent}
 ];
 
 @NgModule({

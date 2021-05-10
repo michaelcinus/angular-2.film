@@ -5,4 +5,10 @@ export interface Serie {
     year: number;
     season: number;
     genere: Genere;
+    numseason: Array<{
+        nSeason: number,
+        title: string,
+        year: number,
+        nEpisodes: number,
+    }>;
 }

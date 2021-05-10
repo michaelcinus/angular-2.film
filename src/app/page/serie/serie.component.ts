@@ -15,13 +15,41 @@ export class SerieComponent implements OnInit {
 
   ngOnInit(): void {
     this.serie.push(
-      {title: 'Game of Thrones', year: 2011, season: 8, genere: Genere.Fantasy},
-      {title: 'Breaking Bad', year: 2008, season: 5, genere: Genere.Thriller},
-      {title: 'Prison Break', year: 2005, season: 5, genere: Genere.Azione},
-      {title: 'Peaky Blinders', year: 2013, season: 5, genere: Genere.Gangstar},
-      {title: 'Californication', year: 2007, season: 7, genere: Genere.Commedia},
-      {title: 'The Following', year: 2013, season: 3, genere: Genere.Giallo},
-      {title: 'Suburra', year: 2017, season: 3, genere: Genere.Gangstar}
+      {title: 'Game of Thrones', year: 2011, season: 8, genere: Genere.Fantasy, numseason: [
+        {nSeason: 1, title: '1 Stagione', nEpisodes: 12, year:2010},
+        {nSeason: 2, title: '2 Stagione', nEpisodes: 15, year:2010},
+        {nSeason: 3, title: '3 Stagione', nEpisodes: 10, year:2010},
+      ]},
+      {title: 'Breaking Bad', year: 2008, season: 5, genere: Genere.Thriller, numseason: [
+        {nSeason: 1, title: '1 Stagione', nEpisodes: 12, year:2010},
+        {nSeason: 2, title: '2 Stagione', nEpisodes: 15, year:2010},
+        {nSeason: 3, title: '3 Stagione', nEpisodes: 10, year:2010},
+      ]},
+      {title: 'Prison Break', year: 2005, season: 5, genere: Genere.Azione, numseason: [
+        {nSeason: 1, title: '1 Stagione', nEpisodes: 12, year:2010},
+        {nSeason: 2, title: '2 Stagione', nEpisodes: 15, year:2010},
+        {nSeason: 3, title: '3 Stagione', nEpisodes: 10, year:2010},
+      ]},
+      {title: 'Peaky Blinders', year: 2013, season: 5, genere: Genere.Gangstar, numseason: [
+        {nSeason: 1, title: '1 Stagione', nEpisodes: 12, year:2010},
+        {nSeason: 2, title: '2 Stagione', nEpisodes: 15, year:2010},
+        {nSeason: 3, title: '3 Stagione', nEpisodes: 10, year:2010},
+      ]},
+      {title: 'Californication', year: 2007, season: 7, genere: Genere.Commedia, numseason: [
+        {nSeason: 1, title: '1 Stagione', nEpisodes: 12, year:2010},
+        {nSeason: 2, title: '2 Stagione', nEpisodes: 15, year:2010},
+        {nSeason: 3, title: '3 Stagione', nEpisodes: 10, year:2010},
+      ]},
+      {title: 'The Following', year: 2013, season: 3, genere: Genere.Giallo, numseason: [
+        {nSeason: 1, title: '1 Stagione', nEpisodes: 12, year:2010},
+        {nSeason: 2, title: '2 Stagione', nEpisodes: 15, year:2010},
+        {nSeason: 3, title: '3 Stagione', nEpisodes: 10, year:2010},
+      ]},
+      {title: 'Suburra', year: 2017, season: 3, genere: Genere.Gangstar, numseason: [
+        {nSeason: 1, title: '1 Stagione', nEpisodes: 12, year:2010},
+        {nSeason: 2, title: '2 Stagione', nEpisodes: 15, year:2010},
+        {nSeason: 3, title: '3 Stagione', nEpisodes: 10, year:2010},
+      ]}
     )
 
   }

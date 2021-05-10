@@ -1,6 +1,5 @@
 <div class="container" style="margin-top: 15vh;">
-  <app-movie-form [movie]="selectedMovie" (feedbackEv)="movieFormEvent($event)"></app-movie-form>
-  <app-movie-modal [movie]="selectedMovie"></app-movie-modal>
+  <app-movie-form (feedbackEv)="movieFormEvent($event)"></app-movie-form>
     <div class="row"  type="button" data-toggle="modal" data-target="#exampleModal">
         <div *ngFor='let m of movies' class="col-md-4" (click)="selectionClick(m)">
             <div class="card border-0 shadow my-5 p-1" style="width: 18rem;">
@@ -12,6 +11,9 @@
         </div>
     </div>
 </div>
+
+<app-movie-modal [movie]="selectedMovie"></app-movie-modal>
+
 
 
 

@@ -33,9 +33,9 @@ export class FilmComponent implements OnInit {
   }
 
   movieFormEvent(event: Movie) {
-    this.movies.push({
-      genere: Number(event.genere),  image: event.image, title: event.title, description: event.description, year: Number(event.year), duration: Number(event.duration)}
-    );
+    console.log(event);
+    
+    this.movies.push(event);
   }
 
 }

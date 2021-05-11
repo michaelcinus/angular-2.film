@@ -11,6 +11,7 @@ import { SerieComponent } from './page/serie/serie.component';
 import { SeasonComponent } from './page/season/season.component';
 import { MovieFormComponent } from './page/film/movie-form/movie-form.component';
 import { MovieModalComponent } from './page/film/movie-modal/movie-modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MovieModalComponent } from './page/film/movie-modal/movie-modal.compone
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

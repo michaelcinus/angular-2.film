@@ -1,6 +1,4 @@
-<button class="btn btn-primary" data-toggle="modal" data-target="#formModal" >Crea Film</button>
-
-<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -10,17 +8,14 @@
           </button>
         </div>
         <div class="modal-body">
-          <form  [formGroup]="movieForm" (ngSubmit)="submit()">
+          <form [formGroup]="editForm" (ngSubmit)="edit()">
             <div class="form-group">
               <label for="recipient-name" class="col-form-label">Title:</label>
-              <input type="text" class="form-control" formControlName="title">
-              <div class="alert alert-danger" *ngIf="!movieForm.get('title')?.valid ">
-                Questo campo è obbligatorio
-              </div>
+              <input type="text" class="form-control" formControlName="title" [(ngModel)]="movie.title">
             </div>
             <div class="form-group">
                 <label for="recipient-name" class="col-form-label">Genere:</label>
-                <select class="form-control" formControlName="genere">
+                <select class="form-control" formControlName="genere" [(ngModel)]="movie.genere">
                   <option value="0">Animazione</option>
                   <option value="1">Avventura</option>
                   <option value="2">Azione</option>
@@ -41,27 +36,25 @@
               </div>
               <div class="form-group">
                 <label for="recipient-name" class="col-form-label">Anno:</label>
-                <input type="number" class="form-control" name="quantity" min="1950" max="2021" formControlName="year">
+                <input type="number" class="form-control" name="quantity" min="1950" max="2021" formControlName="year" [(ngModel)]="movie.year">
               </div>
               <div class="form-group">
                 <label for="recipient-name" class="col-form-label">Durata:</label>
-                <input type="number" class="form-control" formControlName="duration">
+                <input type="number" class="form-control" formControlName="duration" [(ngModel)]="movie.duration">
               </div>
               <div class="form-group">
                 <label for="recipient-name" class="col-form-label">Immagine:</label>
-                <input type="text" class="form-control" formControlName="image">
+                <input type="text" class="form-control" formControlName="image" [(ngModel)]="movie.image">
               </div>
               <div class="form-group">
                 <label for="recipient-name" class="col-form-label">Descrizione:</label>
-                <textarea class="form-control " formControlName="description"></textarea>
+                <textarea class="form-control " formControlName="description" [(ngModel)]="movie.description"></textarea>
               </div>
               <div class="modal-footer">
-                <button class="btn btn-success" [disabled]="!movieForm?.valid">Salva Film</button>
-                <button class="btn btn-secondary" data-dismiss="modal">Exit</button>
+                <button class="btn btn-success" data-dismiss="modal">Salva Film</button>
               </div> 
           </form>
         </div>
       </div>
     </div> 
   </div> 
-

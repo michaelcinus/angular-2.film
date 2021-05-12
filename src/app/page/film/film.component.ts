@@ -13,7 +13,7 @@ export class FilmComponent implements OnInit {
   movies:Array<Movie> = [];
   selectedMovie!: Movie;
 
-  constructor(private movieService: MovieService) { }
+  constructor(private movieService: MovieService) { this.selectedMovie = movieService.getAll()[0]; }
 
   ngOnInit(): void {
     this.movies = this.movieService.getAll();
@@ -28,9 +28,12 @@ export class FilmComponent implements OnInit {
     this.selectedMovie = m;
   }
 
+  deleteMovie(m: Movie):void{
+    let index = this.movies.indexOf(m)
+    this.movies.splice(index,1);
+  }
+
   movieFormEvent(movieAdded: Movie) {
-    console.log(movieAdded);
-    
     this.movieService.add(movieAdded);
   }
 

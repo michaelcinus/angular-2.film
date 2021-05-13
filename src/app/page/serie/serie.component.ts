@@ -10,6 +10,7 @@ import {Genere} from "src/app/model/genere"
 export class SerieComponent implements OnInit {
 
   serie: Array<Serie> = [];
+  selectedSerie!: Serie;
 
   constructor() { }
 
@@ -56,6 +57,19 @@ export class SerieComponent implements OnInit {
 
   getGenreValue(index: number): string {
     return Genere[index];
+  }
+
+  selectionClick(s: Serie): void {
+    this.selectedSerie = s;
+  }
+
+  deleteSerie(s: Serie):void{
+    let index = this.serie.indexOf(s)
+    this.serie.splice(index,1);
+  }
+
+  movieFormEvent(serieAdded: Serie) {
+    this.serie.push(serieAdded);
   }
 
 }

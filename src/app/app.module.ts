@@ -13,6 +13,8 @@ import { MovieFormComponent } from './page/film/movie-form/movie-form.component'
 import { MovieModalComponent } from './page/film/movie-modal/movie-modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MovieEditComponent } from './page/film/movie-edit/movie-edit.component';
+import { SerieFormComponent } from './page/serie/serie-form/serie-form.component';
+import { SerieEditComponent } from './page/serie/serie-edit/serie-edit.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { MovieEditComponent } from './page/film/movie-edit/movie-edit.component'
     MovieFormComponent,
     MovieModalComponent,
     MovieEditComponent,
+    SerieFormComponent,
+    SerieEditComponent,
   ],
   imports: [
     BrowserModule,

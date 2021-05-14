@@ -68,7 +68,7 @@ export class SerieComponent implements OnInit {
     this.serie.splice(index,1);
   }
 
-  movieFormEvent(serieAdded: Serie) {
+  serieFormEvent(serieAdded: Serie) {
     this.serie.push(serieAdded);
   }
 
